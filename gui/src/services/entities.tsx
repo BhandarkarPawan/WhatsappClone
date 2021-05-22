@@ -60,3 +60,8 @@ export type IncomingWSEvent = IWSTextMessage | IWSImageMessage;
 export type OutgoingWSEvent = IWSPoke;
 export type IncomingWSEventname = IncomingWSEvent["event_name"];
 export type OutgoingWSEventname = OutgoingWSEvent["event_name"];
+
+export interface IMessage {
+  username: string;
+  message: string;
+}

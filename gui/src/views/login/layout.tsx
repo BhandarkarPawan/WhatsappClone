@@ -1,12 +1,10 @@
 import React from "react";
-import SpotlightLayout from "../../layouts/spotlight/spotlight";
-import Login from "./content-panel";
-import useStyles from "./layout.styles";
+import SpotlightLayout from "../../layouts/spotlight";
+import Login from ".";
 
 const LoginLayout: React.FC = () => {
-  const styles = useStyles();
   return (
-    <div className={styles.loginLayout}>
+    <div className="login">
       <SpotlightLayout centerPanel={<Login />} />
     </div>
   );

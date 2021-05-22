@@ -1,0 +1,9 @@
+$font-primary: "Merriwather";
+$font-secondary : "DM Serif Display";
+$font-card: "Public Sans";
+
+
+@mixin title($font) {
+  font-family: $font;
+  font-weight: bold;
+}

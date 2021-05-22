@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import LoginLayout from "../views/login/layout";
 import MainMenuLayout from "../views/main-menu/layout";
+import SandBoxLayout from "../views/sandbox/layout";
 
 const Routes: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Routes: React.FC = () => {
 export default Routes;
 
 const RedirectWrapper: React.FC<RouteComponentProps> = (props) => {
-  return <LoginLayout />;
+  return <SandBoxLayout />;
 };
 
 const MainMenuWrapper: React.FC<RouteComponentProps> = (props) => {

@@ -6,6 +6,7 @@ import { AppContextProvider } from "./app-context";
 import Routes from "./routes";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/dist/styles.css";
 
 require("dotenv").config();
 
