@@ -146,13 +146,17 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
 }
 
 .cc-message-received {
   padding: 0 1em;
   background: #343a40;
   color: white;
-  margin-right: auto;
+  margin: auto 1em;
   max-width: 40%;
   border-radius: 0.5em;
   padding: 0.5em 1em;
@@ -198,7 +202,6 @@ form {
   color: white;
   padding: 0.5em 1em;
   background: teal;
-  margin-left: auto;
   max-width: 40%;
   border-radius: 0.5em;
   position: relative;
@@ -207,8 +210,8 @@ form {
 /* speech bubble 13 */
 .sb-r:before {
   content: '';
-  position: absolute;
-  border-left: 1em solid teal;
+  margin-bottom: 1em;
+  border-left: 1em solid red;
   border-right: 1em solid transparent;
   border-top: 1em solid teal;
   border-bottom: 1em solid transparent;

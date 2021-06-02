@@ -20,12 +20,12 @@
 
   <!--MAIN-->
   <body>
-    <div class="h-100">
-      <div class="row h-100 gx-0">
+    <div class="container-fluid gx-0">
+      <div class="row gx-0">
         <!--SIDE PANEL-->
-        <div class="col-4">
+        <div class="col-3">
           <!--NAVBAR-->
-          <header class="sticky-top">
+          <header class="cc-header-left">
             <nav class="navbar navbar-dark">
               <img src="img/profile.jpeg" class="cc-profile-pic" />
               <div id="icons" class="d-flex justify-content-between">
@@ -41,21 +41,32 @@
                     ><i class="fa fa-ellipsis-v"></i
                   ></a>
                   <ul
-                    class="dropdown-menu bg-dark"
+                    class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item text-white" href="#">Action</a>
+                      <a class="dropdown-item text-white" href="#">New Group</a>
                     </li>
                     <li>
                       <a class="dropdown-item text-white" href="#"
-                        >Another action</a
+                        >Create a Room</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Something else here</a
-                      >
+                      <a class="dropdown-item text-white" href="#">Profile</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#">Archived</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#">Starred</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#">Settings</a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item text-white" href="#">Logout</a>
                     </li>
                   </ul>
                 </div>
@@ -275,9 +286,9 @@
         </div>
 
         <!--MAIN CHAT-->
-        <div class="col-8 bg-success" id="main">
+        <div class="col-9" id="main">
           <!--NAVBAR -->
-          <header>
+          <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
               <div class="d-flex flex-row">
                 <img src="img/Fall bois.jpeg" class="cc-profile-pic" />
@@ -290,32 +301,83 @@
               </div>
               <div id="icons-main" class="d-flex justify-content-between">
                 <a href="#" class="cc-nav-icon"><i class="fa fa-search"></i></a>
-                <a href="#" class="cc-nav-icon"
-                  ><i class="fa fa-ellipsis-v"></i
-                ></a>
+                <div class="dropdown">
+                  <a href="#" class="cc-nav-icon" data-bs-toggle="dropdown"
+                    ><i class="fa fa-ellipsis-v"></i
+                  ></a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item text-white" href="#"
+                        >Contact Info</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#"
+                        >Select Messages</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#"
+                        >Mute Notifications</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#"
+                        >Clear Messages</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white" href="#"
+                        >Delete Chat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </nav>
           </header>
 
-          <div class="w-100">
-            <div class="cc-message-stream">
-              <div class="cc-message-received sb-l">
-                <p class="cc-sender-name">Hemanth Kamath</p>
-                How was Miles Morales?
-                <div class="cc-message-tag">
-                  <small class="me-1">12:45 AM</small>
-                </div>
+          <!--MESSAGE STREAM-->
+          <div class="cc-message-stream">
+            <div class="cc-message-received sb-l">
+              <p class="cc-sender-name">Hemanth Kamath</p>
+              How was Miles Morales?
+              <div class="cc-message-tag">
+                <small class="me-1">12:45 AM</small>
               </div>
-              <div class="cc-message-sent sb-r">
-                It was amazing! Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Quibusdam, ratione!
-                <div class="cc-message-tag">
-                  <small class="me-1">12:45 AM</small>
-                  <i class="fa fa-check-double"></i>
-                </div>
+            </div>
+
+            <div class="cc-message-sent sb-r">
+              It was amazing! Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Quibusdam, ratione!
+              <div class="cc-message-tag">
+                <small class="me-1">12:45 AM</small>
+                <i class="fa fa-check-double"></i>
+              </div>
+            </div>
+
+            <div class="cc-message-sent">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+              quam sequi impedit adipisci asperiores! Corrupti a incidunt
+              deserunt praesentium ipsa?
+              <div class="cc-message-tag">
+                <small class="me-1">12:45 AM</small>
+                <i class="fa fa-check-double"></i>
+              </div>
+            </div>
+
+            <div class="cc-message-sent">
+              Ipsum, dolor consectetur adipisicing elit. At, iure?
+              <div class="cc-message-tag">
+                <small class="me-1">12:45 AM</small>
+                <i class="fa fa-check-double"></i>
               </div>
             </div>
           </div>
+
           <div class="cc-message-input bg-dark p-3">
             <div class="d-flex">
               <i class="far fa-laugh fa-lg cc-nav-icon p-2"></i>

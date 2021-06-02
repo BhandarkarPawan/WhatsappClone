@@ -123,22 +123,31 @@ form {
   font-size: 0.7em;
 }
 
-#main {
-  border-left: 1px #212529 solid;
-  background: url("../img/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.cc-main-nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .cc-message-input {
-  position: fixed;
-  bottom: 0;
-  width: 66.66%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40px;
+          flex: 0 1 40px;
 }
 
-.cc-message-stream {
-  padding: 0 4em;
+.dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  padding: 0.5em 1em;
+}
+
+.dropdown-item:hover {
+  background-color: #212529;
+}
+
+#main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,6 +155,29 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  border-left: 1px #212529 solid;
+  background: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cc-message-stream {
+  padding: 0 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
 }
 
 .cc-message-received {
@@ -164,6 +196,7 @@ form {
       -ms-flex-flow: column;
           flex-flow: column;
   position: relative;
+  margin-bottom: 1em;
 }
 
 .cc-sender-name {
@@ -202,6 +235,7 @@ form {
   max-width: 40%;
   border-radius: 0.5em;
   position: relative;
+  margin-bottom: 0.25em;
 }
 
 /* speech bubble 13 */
