@@ -78,7 +78,7 @@ body {
   }
 }
 
-.text {
+.cc-text {
   width: 100%;
   display: flex;
   flex-flow: row;
@@ -223,4 +223,46 @@ form {
   border-radius: 0.5em;
   left: -1em;
   top: 0px;
+}
+
+.sidebar {
+  &.left {
+    left: -25%;
+  }
+
+  &.right {
+    right: -25%;
+  }
+
+  height: 100%; /* 100% Full-height */
+  width: 25%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Stay on top */
+  top: 0;
+  background-color: $color-highlight-dark; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }

@@ -24,6 +24,108 @@
       <div class="row gx-0">
         <!--SIDE PANEL-->
         <div class="col-3">
+          <!--SIDEBAR LEFT-->
+          <div id="mySidebarLeft" class="sidebar left">
+            <header>
+              <nav class="navbar navbar-dark pt-5">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeLeftNav()"
+                    ><i class="fas fa-arrow-left"></i
+                  ></a>
+                  <h4 class="ps-5 cc-text">New Chat</h4>
+                </div>
+              </nav>
+              <form>
+                <div class="form-group bg-dark px-4 py-2 text-muted">
+                  <div class="input-group cc-chat-search">
+                    <div class="input-group-prepend">
+                      <i class="fa fa-search px-3 py-2"></i>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control border-0"
+                      placeholder="Search Contacts"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div class="cc-chat-room">
+                <img src="img/new-group.png" class="cc-profile-pic mb-3" />
+                <div class="d-flex flex-column w-100 justify-content-center">
+                  <h5 class="text-white ps-3">New Group</h5>
+                  <hr class="mb-0 text-muted" />
+                </div>
+              </div>
+              <div class="cc-chat-room">
+                <div class="d-flex flex-column w-100 justify-content-center">
+                  <p class="ps-3 cc-unread-notif">FREQUENTLY CONTACTED</p>
+                  <hr class="mb-0 text-muted" />
+                </div>
+              </div>
+              <div class="cc-chat-room pb-0">
+                <img src="img/nikhil.jpeg" class="cc-profile-pic" />
+                <div
+                  class="d-flex flex-column w-100 ps-3 justify-content-center"
+                >
+                  <h5 class="text-white">Nikhil Kamath</h5>
+                  <p class="cc-unread-text">Shivoham</p>
+                  <hr class="m-0 text-muted" />
+                </div>
+              </div>
+              <div class="cc-chat-room pb-0">
+                <img src="img/shastry.jpeg" class="cc-profile-pic" />
+                <div
+                  class="d-flex flex-column w-100 ps-3 justify-content-center"
+                >
+                  <h5 class="text-white">Prathviraj Shastry</h5>
+                  <p class="cc-unread-text">I'm like the fight club</p>
+                  <hr class="m-0 text-muted" />
+                </div>
+              </div>
+              <div class="cc-chat-room pb-0">
+                <img src="img/abhinav.jpeg" class="cc-profile-pic" />
+                <div
+                  class="d-flex flex-column w-100 ps-3 justify-content-center"
+                >
+                  <h5 class="text-white">Abhinav Nayak</h5>
+                  <p class="cc-unread-text">.</p>
+                  <hr class="m-0 text-muted" />
+                </div>
+              </div>
+            </header>
+          </div>
+          <!--END OF SIDEBAR LEFT-->
+          <!--SIDEBAR RIGHT-->
+          <div id="mySidebarRight" class="sidebar right">
+            <header>
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeRightNav()"
+                    ><i class="fas fa-times"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">Search Message</h5>
+                </div>
+              </nav>
+              <form>
+                <div class="form-group bg-dark px-4 py-2 text-muted">
+                  <div class="input-group cc-chat-search">
+                    <div class="input-group-prepend">
+                      <i class="fa fa-search px-3 py-2"></i>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control border-0"
+                      placeholder="Search..."
+                    />
+                  </div>
+                </div>
+              </form>
+              <p class="mt-5 text-center cc-unread-text">
+                Search for messages within Fall Bois
+              </p>
+            </header>
+          </div>
+          <!--END OF SIDEBAR RIGHT-->
           <!--NAVBAR-->
           <header class="cc-header-left">
             <nav class="navbar navbar-dark">
@@ -32,7 +134,7 @@
                 <a href="#" class="cc-nav-icon"
                   ><i class="fa fa-circle-o"></i
                 ></a>
-                <a href="#" class="cc-nav-icon"
+                <a href="#" class="cc-nav-icon" onclick="openLeftNav()"
                   ><i class="fa fa-commenting"></i
                 ></a>
 
@@ -72,6 +174,7 @@
                 </div>
               </div>
             </nav>
+            <!--END OF NAVBAR-->
             <!--SEARCHBAR-->
             <form>
               <div class="form-group bg-dark px-4 py-2 text-muted">
@@ -88,19 +191,19 @@
               </div>
             </form>
           </header>
-
+          <!--END OF SEARCHBAR-->
           <!--CHAT ROOMS-->
 
           <div class="cc-chat-room pb-0">
             <img src="img/abhinav.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6 class="text-white">Abhinav Nayak</h6>
                 <small class="cc-unread-notif">01:30 PM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="cc-unread-text">
-                  I meant everyone involved is a localite
+                  I meant everyone involved is a local...
                 </div>
                 <div class="d-flex">
                   <span class="fa-stack">
@@ -117,11 +220,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/nikhil.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6 class="text-white">Nikhil Kamath</h6>
                 <small class="cc-unread-notif">12:08 PM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="cc-unread-text">What plans today?</div>
                 <div class="d-flex">
                   <span class="fa-stack">
@@ -138,11 +241,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/shastry.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Prathviraj Shastry</h6>
                 <small class="text-muted">11:56 AM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">
                   <i class="fa fa-check fa-sm"></i> I'm just gonna HODL
                 </div>
@@ -157,11 +260,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/sri.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Srilakshmi</h6>
                 <small class="text-muted">01:08 AM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">When are you getting it?</div>
                 <div class="d-flex">
                   <i class="cc-down fas fa-chevron-down"></i>
@@ -174,11 +277,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/Fall bois.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Fall Bois</h6>
                 <small class="text-muted">12: 45 AM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">Hemanth: 😂</div>
                 <div class="d-flex">
                   <i class="cc-down fas fa-chevron-down"></i>
@@ -191,11 +294,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/ajey.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Ajey Pai</h6>
                 <small class="text-muted">12:02 AM</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">
                   https://twitter.com/paimaamu/status/...
                 </div>
@@ -211,11 +314,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/family.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Family</h6>
                 <small class="text-muted">yesterday</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">
                   <i class="text-primary fa fa-check-double fa-sm"></i>
                   Call any of the above numbers please
@@ -231,11 +334,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/hemanth.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Hemanth</h6>
                 <small class="text-muted">yesterday</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">Peace</div>
                 <div class="d-flex">
                   <i class="cc-down fas fa-chevron-down"></i>
@@ -249,11 +352,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/nidhi.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Nidhi</h6>
                 <small class="text-muted">yesterday</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">
                   <i class="fas fa-check-double fa-sm"></i> Second monitor is
                   life changing
@@ -269,11 +372,11 @@
           <div class="cc-chat-room pb-0">
             <img src="img/kshitij.jpeg" class="cc-profile-pic" />
             <div class="d-flex flex-column w-100">
-              <div class="text">
+              <div class="cc-text">
                 <h6>Kshitij</h6>
                 <small class="text-muted">yesterday</small>
               </div>
-              <div class="text">
+              <div class="cc-text">
                 <div class="text-muted">Bruh Bruh Bruh ❤️</div>
                 <div class="d-flex">
                   <i class="cc-down fas fa-chevron-down"></i>
@@ -284,7 +387,7 @@
             </div>
           </div>
         </div>
-
+        <!--END OF CHAT ROOMS-->
         <!--MAIN CHAT-->
         <div class="col-9" id="main">
           <!--NAVBAR -->
@@ -300,7 +403,9 @@
                 </div>
               </div>
               <div id="icons-main" class="d-flex justify-content-between">
-                <a href="#" class="cc-nav-icon"><i class="fa fa-search"></i></a>
+                <a href="#" class="cc-nav-icon" onclick="openRightNav()"
+                  ><i class="fa fa-search"></i
+                ></a>
                 <div class="dropdown">
                   <a href="#" class="cc-nav-icon" data-bs-toggle="dropdown"
                     ><i class="fa fa-ellipsis-v"></i
@@ -339,7 +444,7 @@
               </div>
             </nav>
           </header>
-
+          <!--END OF NAVBAR -->
           <!--MESSAGE STREAM-->
           <div class="cc-message-stream">
             <div class="cc-message-received sb-l">
@@ -377,7 +482,8 @@
               </div>
             </div>
           </div>
-
+          <!--END OF MESSAGE STREAM-->
+          <!--NEW INPUT-->
           <div class="cc-message-input bg-dark p-3">
             <div class="d-flex">
               <i class="far fa-laugh fa-lg cc-nav-icon p-2"></i>
@@ -390,6 +496,7 @@
               <i class="fas fa-microphone fa-lg cc-nav-icon mx-2 p-2"></i>
             </div>
           </div>
+          <!--END OF NEW INPUT-->
         </div>
       </div>
     </div>
@@ -398,5 +505,23 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function openLeftNav() {
+        document.getElementById('mySidebarLeft').style.left = '0';
+      }
+
+      function openRightNav() {
+        document.getElementById('mySidebarRight').style.right = '0';
+      }
+
+      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+      function closeLeftNav() {
+        document.getElementById('mySidebarLeft').style.left = '-25%';
+      }
+
+      function closeRightNav() {
+        document.getElementById('mySidebarRight').style.right = '-25%';
+      }
+    </script>
   </body>
 </html>
