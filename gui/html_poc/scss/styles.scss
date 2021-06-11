@@ -4,6 +4,7 @@ $color-highlight-muted: rgb(52, 58, 64);
 $color-highlight-dark: #212529;
 $color-unread: #25d366;
 $main-background: #111214;
+$color-status-secondary: rgb(20, 20, 20);
 
 $sender-color-1: #6cb988;
 $sender-color-2: #c18adb;
@@ -39,11 +40,25 @@ body {
 }
 
 .cc-profile-pic {
+  &.status {
+    border: $color-unread 3px solid;
+    max-height: 56px;
+
+    &.multi {
+      border: $color-unread 4px dashed;
+      max-height: 60px;
+    }
+  }
+
   border-radius: 2em;
   max-height: 50px;
 }
 
 .cc-chat-room {
+  &.status {
+    background-color: $color-status-secondary;
+  }
+
   display: flex;
   flex-flow: row;
   color: white;
@@ -145,6 +160,45 @@ form {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.cc-status-left {
+  background-color: $color-status-secondary;
+}
+
+.cc-status-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.cc-status-notch {
+  font-size: 6em;
+}
+
+.cc-status-close {
+  &:hover {
+    color: $color-highlight-light;
+  }
+  font-size: 1.4em;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  color: white;
+}
+
+.cc-status-text {
+  font-size: 1.2em;
+}
+
+.cc-status-main {
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center;
+  color: grey;
 }
 
 .cc-message-stream {

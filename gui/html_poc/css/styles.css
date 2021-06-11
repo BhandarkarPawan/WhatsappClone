@@ -32,6 +32,16 @@ body {
   max-height: 50px;
 }
 
+.cc-profile-pic.status {
+  border: #25d366 3px solid;
+  max-height: 56px;
+}
+
+.cc-profile-pic.status.multi {
+  border: #25d366 4px dashed;
+  max-height: 60px;
+}
+
 .cc-chat-room {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +53,10 @@ body {
   color: white;
   padding: 1rem;
   background: #212529;
+}
+
+.cc-chat-room.status {
+  background-color: #141414;
 }
 
 .cc-chat-room.active {
@@ -160,6 +174,60 @@ form {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.cc-status-left {
+  background-color: #141414;
+}
+
+.cc-status-right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+}
+
+.cc-status-notch {
+  font-size: 6em;
+}
+
+.cc-status-close {
+  font-size: 1.4em;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  color: white;
+}
+
+.cc-status-close:hover {
+  color: #c5c5c5;
+}
+
+.cc-status-text {
+  font-size: 1.2em;
+}
+
+.cc-status-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: column;
+      -ms-flex: column;
+          flex: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: grey;
 }
 
 .cc-message-stream {
