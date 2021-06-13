@@ -212,34 +212,49 @@ form {
 
   &:hover {
     .float {
-      transform: translateY(-400px);
       opacity: 1;
       width: 60px;
       height: 60px;
       left: 4%;
       color: #fff;
+
+      &.float-1 {
+        transform: translateY(-380px);
+      }
+      &.float-2 {
+        transform: translateY(-300px);
+      }
+      &.float-3 {
+        transform: translateY(-220px);
+      }
+      &.float-4 {
+        transform: translateY(-140px);
+      }
+      &.float-5 {
+        transform: translateY(-60px);
+      }
     }
   }
   .float {
     &.float-1 {
       background-color: #447cec;
-      bottom: -5%;
+      // bottom: -5%;
     }
     &.float-2 {
       background-color: #14acf4;
-      bottom: -15%;
+      // bottom: -15%;
     }
     &.float-3 {
       background-color: #5c64cc;
-      bottom: -25%;
+      // bottom: -25%;
     }
     &.float-4 {
       background-color: #ec447c;
-      bottom: -35%;
+      // bottom: -35%;
     }
     &.float-5 {
       background-color: #bc5ccc;
-      bottom: -45%;
+      // bottom: -45%;
     }
 
     display: none;

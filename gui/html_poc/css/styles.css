@@ -250,13 +250,36 @@ form {
 }
 
 .cc-message-stream:hover .float {
-  -webkit-transform: translateY(-400px);
-          transform: translateY(-400px);
   opacity: 1;
   width: 60px;
   height: 60px;
   left: 4%;
   color: #fff;
+}
+
+.cc-message-stream:hover .float.float-1 {
+  -webkit-transform: translateY(-380px);
+          transform: translateY(-380px);
+}
+
+.cc-message-stream:hover .float.float-2 {
+  -webkit-transform: translateY(-300px);
+          transform: translateY(-300px);
+}
+
+.cc-message-stream:hover .float.float-3 {
+  -webkit-transform: translateY(-220px);
+          transform: translateY(-220px);
+}
+
+.cc-message-stream:hover .float.float-4 {
+  -webkit-transform: translateY(-140px);
+          transform: translateY(-140px);
+}
+
+.cc-message-stream:hover .float.float-5 {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
 }
 
 .cc-message-stream .float {
@@ -286,27 +309,22 @@ form {
 
 .cc-message-stream .float.float-1 {
   background-color: #447cec;
-  bottom: -5%;
 }
 
 .cc-message-stream .float.float-2 {
   background-color: #14acf4;
-  bottom: -15%;
 }
 
 .cc-message-stream .float.float-3 {
   background-color: #5c64cc;
-  bottom: -25%;
 }
 
 .cc-message-stream .float.float-4 {
   background-color: #ec447c;
-  bottom: -35%;
 }
 
 .cc-message-stream .float.float-5 {
   background-color: #bc5ccc;
-  bottom: -45%;
 }
 
 .my-float {
