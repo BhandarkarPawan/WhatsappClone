@@ -16,6 +16,11 @@ body {
   background: $main-background;
 }
 
+.cc-chatroom-list {
+  overflow-y: auto;
+  height: 100%;
+}
+
 .navbar {
   background: $color-highlight-muted;
   border-bottom: 1px $color-highlight-dark solid;
@@ -42,11 +47,21 @@ body {
 .cc-profile-pic {
   &.status {
     border: $color-unread 3px solid;
-    max-height: 56px;
+    max-height: 64px;
+    margin: 0;
+    margin-right: 32px;
+    margin-bottom: 10px;
+
+    &:hover {
+      max-height: 68px;
+      margin: 0;
+      margin-right: 28px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
 
     &.multi {
       border: $color-unread 4px dashed;
-      max-height: 60px;
     }
   }
 
@@ -54,15 +69,33 @@ body {
   max-height: 50px;
 }
 
+.cc-divider {
+  margin-bottom: 0;
+  color: grey;
+}
+
 .cc-chat-room {
-  &.status {
+  &.status,
+  &.status:hover {
+    margin: 1em;
     background-color: $color-status-secondary;
+    cursor: default;
   }
 
+  .cc-story {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-left: 0.5em;
+    justify-content: center;
+  }
+
+  z-index: 50;
   display: flex;
   flex-flow: row;
   color: white;
   padding: 1rem;
+  padding-bottom: 0;
   background: $color-highlight-dark;
 
   &.active {
@@ -129,6 +162,10 @@ form {
   }
 }
 
+.cc-header-left {
+  z-index: 100;
+}
+
 .fa-stack {
   font-size: 0.7em;
 }
@@ -154,7 +191,6 @@ form {
 #main {
   display: flex;
   flex-flow: column;
-  // height: 100%;
   border-left: 1px $color-highlight-dark solid;
   background: url('../img/background.png');
   background-repeat: no-repeat;
@@ -202,6 +238,7 @@ form {
 }
 
 .cc-message-stream {
+  overflow-y: auto;
   position: relative;
   padding: 0 6em;
   display: flex;
@@ -210,67 +247,35 @@ form {
   flex: 1 1 auto;
   height: 100%;
 
-  &:hover {
-    .float {
-      opacity: 1;
-      width: 60px;
-      height: 60px;
-      left: 4%;
-      color: #fff;
-
-      &.float-1 {
-        transform: translateY(-380px);
-      }
-      &.float-2 {
-        transform: translateY(-300px);
-      }
-      &.float-3 {
-        transform: translateY(-220px);
-      }
-      &.float-4 {
-        transform: translateY(-140px);
-      }
-      &.float-5 {
-        transform: translateY(-60px);
-      }
-    }
-  }
+  /*Make the buttons above the attchment icon*/
   .float {
-    &.float-1 {
+    &#float-1 {
       background-color: #447cec;
-      // bottom: -5%;
     }
-    &.float-2 {
+    &#float-2 {
       background-color: #14acf4;
-      // bottom: -15%;
     }
-    &.float-3 {
+    &#float-3 {
       background-color: #5c64cc;
-      // bottom: -25%;
     }
-    &.float-4 {
+    &#float-4 {
       background-color: #ec447c;
-      // bottom: -35%;
     }
-    &.float-5 {
+    &#float-5 {
       background-color: #bc5ccc;
-      // bottom: -45%;
     }
 
-    display: none;
     opacity: 0;
-    transition: 0.3s ease-in-out;
-    left: 6%;
-    width: 0px;
-    height: 0px;
+    transition: 0.2s ease-in-out;
+    left: 4%;
+    color: white;
     display: flex;
-    margin: auto;
     align-items: center;
     justify-content: center;
     position: absolute;
     border-radius: 50%;
     z-index: 100;
-    box-shadow: 2px 2px 3px $color-highlight-dark;
+    // box-shadow: 2px 2px 3px $color-highlight-dark;
   }
 }
 
@@ -278,6 +283,7 @@ form {
   font-size: 1.5em;
 }
 
+/*Show the sender name and the message in grey*/
 .cc-message-received {
   padding: 0 1em;
   background: $color-highlight-muted;
@@ -292,12 +298,14 @@ form {
   margin-bottom: 1em;
 }
 
+/*Different sender name colors based on sender (group)*/
 .cc-sender-name {
   color: $sender-color-1;
   font-weight: bold;
   font-size: 0.9em;
 }
 
+/*Time and seen status inside the message stream*/
 .cc-message-tag {
   display: flex;
   flex-flow: row;
@@ -306,6 +314,7 @@ form {
   align-self: flex-end;
 }
 
+/*Show your message in green*/
 .cc-message-sent {
   display: flex;
   flex-flow: column;
@@ -320,8 +329,7 @@ form {
   margin-bottom: 0.25em;
 }
 
-/* speech bubble 13 */
-
+/*Chat tail for the sent messages*/
 .sb-r:before {
   content: '';
   position: absolute;
@@ -334,7 +342,7 @@ form {
   top: 0px;
 }
 
-/* speech bubble 14 */
+/*Chat tail for the receievd messages*/
 .sb-l:before {
   content: '';
   position: absolute;
@@ -347,12 +355,16 @@ form {
   top: 0px;
 }
 
-.sidebar {
-  &.left {
+.dropdown-item,
+.dropdown-item:hover {
+  color: white;
+}
+.cc-sidebar {
+  &.cc-sidebar-left {
     left: -25%;
   }
 
-  &.right {
+  &.cc-sidebar-right {
     right: -25%;
   }
 
@@ -363,11 +375,11 @@ form {
   top: 0;
   background-color: $color-highlight-dark; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the cc-sidebar */
 }
 
-/* The sidebar links */
-.sidebar a {
+/* The cc-sidebar links */
+.cc-sidebar a {
   text-decoration: none;
   font-size: 1.5em;
   color: #818181;
@@ -376,12 +388,12 @@ form {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
+.cc-sidebar a:hover {
   color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidebar .closebtn {
+.cc-sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;

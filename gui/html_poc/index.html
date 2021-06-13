@@ -20,23 +20,21 @@
 
   <!--MAIN-->
   <body>
-    <div class="container-fluid gx-0">
-      <div class="row gx-0">
-        <!--SIDE PANEL-->
-        <div class="col-3">
-          <!--SIDEBAR LEFT-->
-          <div id="mySidebarLeft" class="sidebar left">
+    <div class="container-fluid gx-0 h-100">
+      <div class="row h-100 gx-0">
+        <!--CHAT ROOM LIST-->
+        <div class="cc-chatroom-list col-3">
+          <!--NEW CHAT SIDE BAR-->
+          <div id="sidebarLeft" class="cc-sidebar cc-sidebar-left">
             <header>
-              <nav class="navbar navbar-dark pt-5">
-                <div class="text-white mx-0 d-flex flex-row">
-                  <a href="#" onclick="closeLeftNav()"
-                    ><i class="fas fa-arrow-left"></i
-                  ></a>
-                  <h4 class="ps-5 cc-text">New Chat</h4>
-                </div>
+              <nav class="navbar navbar-dark d-block pt-5">
+                <a class="d-inline" href="#" onclick="closeLeftNav()"
+                  ><i class="fas fa-arrow-left"></i
+                ></a>
+                <h4 class="d-inline ps-5 cc-text">New Chat</h4>
               </nav>
               <form>
-                <div class="form-group bg-dark px-4 py-2 text-muted">
+                <div class="form-group px-4 py-2 text-muted">
                   <div class="input-group cc-chat-search">
                     <div class="input-group-prepend">
                       <i class="fa fa-search px-3 py-2"></i>
@@ -51,52 +49,44 @@
               </form>
               <div class="cc-chat-room">
                 <img src="img/new-group.png" class="cc-profile-pic mb-3" />
-                <div class="d-flex flex-column w-100 justify-content-center">
+                <div class="cc-story">
                   <h5 class="text-white ps-3">New Group</h5>
-                  <hr class="mb-0 text-muted" />
                 </div>
               </div>
+              <p class="ps-3 mt-3 cc-unread-notif">FREQUENTLY CONTACTED</p>
+              <hr class="cc-divider" />
+
               <div class="cc-chat-room">
-                <div class="d-flex flex-column w-100 justify-content-center">
-                  <p class="ps-3 cc-unread-notif">FREQUENTLY CONTACTED</p>
-                  <hr class="mb-0 text-muted" />
-                </div>
-              </div>
-              <div class="cc-chat-room pb-0">
                 <img src="img/nikhil.jpeg" class="cc-profile-pic" />
-                <div
-                  class="d-flex flex-column w-100 ps-3 justify-content-center"
-                >
+                <div class="cc-story">
                   <h5 class="text-white">Nikhil Kamath</h5>
                   <p class="cc-unread-text">Shivoham</p>
-                  <hr class="m-0 text-muted" />
+                  <hr class="cc-divider" />
                 </div>
               </div>
-              <div class="cc-chat-room pb-0">
+
+              <div class="cc-chat-room">
                 <img src="img/shastry.jpeg" class="cc-profile-pic" />
-                <div
-                  class="d-flex flex-column w-100 ps-3 justify-content-center"
-                >
+                <div class="cc-story">
                   <h5 class="text-white">Prathviraj Shastry</h5>
                   <p class="cc-unread-text">I'm like the fight club</p>
-                  <hr class="m-0 text-muted" />
+                  <hr class="cc-divider" />
                 </div>
               </div>
-              <div class="cc-chat-room pb-0">
+
+              <div class="cc-chat-room">
                 <img src="img/abhinav.jpeg" class="cc-profile-pic" />
-                <div
-                  class="d-flex flex-column w-100 ps-3 justify-content-center"
-                >
+                <div class="cc-story">
                   <h5 class="text-white">Abhinav Nayak</h5>
                   <p class="cc-unread-text">.</p>
-                  <hr class="m-0 text-muted" />
+                  <hr class="cc-divider" />
                 </div>
               </div>
             </header>
           </div>
           <!--END OF SIDEBAR LEFT-->
           <!--SIDEBAR RIGHT-->
-          <div id="mySidebarRight" class="sidebar right">
+          <div id="sidebarRight" class="cc-sidebar cc-sidebar-right">
             <header>
               <nav class="navbar navbar-dark pt-4">
                 <div class="text-white mx-0 d-flex flex-row">
@@ -127,7 +117,7 @@
           </div>
           <!--END OF SIDEBAR RIGHT-->
           <!--NAVBAR-->
-          <header class="cc-header-left">
+          <header class="cc-header-left sticky-top">
             <nav class="navbar navbar-dark">
               <img src="img/profile.jpeg" class="cc-profile-pic" />
               <div id="icons" class="d-flex justify-content-between">
@@ -147,28 +137,25 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item text-white" href="#">New Group</a>
+                      <a class="dropdown-item" href="#">New Group</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Create a Room</a
-                      >
+                      <a class="dropdown-item" href="#">Create a Room</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Profile</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#">Archived</a>
+                      <a class="dropdown-item" href="#">Archived</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#">Starred</a>
+                      <a class="dropdown-item" href="#">Starred</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#">Settings</a>
+                      <a class="dropdown-item" href="#">Settings</a>
                     </li>
-
                     <li>
-                      <a class="dropdown-item text-white" href="#">Logout</a>
+                      <a class="dropdown-item" href="#">Logout</a>
                     </li>
                   </ul>
                 </div>
@@ -213,7 +200,25 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
+            </div>
+          </div>
+
+          <div class="cc-chat-room pb-0">
+            <img src="img/aishvarya.png" class="cc-profile-pic" />
+            <div class="d-flex flex-column w-100">
+              <div class="cc-text">
+                <h6>Aishvarya</h6>
+                <small class="text-muted">01:15 PM</small>
+              </div>
+              <div class="cc-text">
+                <div class="text-muted">Are you on Tumblr????</div>
+                <div class="d-flex">
+                  <i class="cc-down fas fa-chevron-down"></i>
+                </div>
+              </div>
+
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -234,7 +239,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -253,7 +258,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -270,7 +275,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -287,7 +292,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -307,7 +312,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -327,7 +332,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -345,7 +350,7 @@
                 </div>
               </div>
 
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -365,7 +370,7 @@
                   <i class="cc-down fas fa-chevron-down"></i>
                 </div>
               </div>
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
 
@@ -383,13 +388,13 @@
                 </div>
               </div>
 
-              <hr class="mb-0 text-muted" />
+              <hr class="cc-divider" />
             </div>
           </div>
         </div>
         <!--END OF CHAT ROOMS-->
         <!--MAIN CHAT-->
-        <div class="col-9" id="main">
+        <div class="col-9 h-100" id="main">
           <!--NAVBAR -->
           <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
@@ -415,29 +420,19 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Contact Info</a
-                      >
+                      <a class="dropdown-item" href="#">Contact Info</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Select Messages</a
-                      >
+                      <a class="dropdown-item" href="#">Select Messages</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Mute Notifications</a
-                      >
+                      <a class="dropdown-item" href="#">Mute Notifications</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Clear Messages</a
-                      >
+                      <a class="dropdown-item" href="#">Clear Messages</a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-white" href="#"
-                        >Delete Chat</a
-                      >
+                      <a class="dropdown-item" href="#">Delete Chat</a>
                     </li>
                   </ul>
                 </div>
@@ -448,19 +443,19 @@
           <!--MESSAGE STREAM-->
 
           <div class="cc-message-stream">
-            <a href="#" class="float float-1">
+            <a href="#" id="float-1" class="float">
               <i class="fa fa-video my-float"></i>
             </a>
-            <a href="#" class="float float-2">
+            <a href="#" id="float-2" class="float">
               <i class="fa fa-user my-float"></i>
             </a>
-            <a href="#" class="float float-3">
+            <a href="#" id="float-3" class="float">
               <i class="fa fa-file my-float"></i>
             </a>
-            <a href="#" class="float float-4">
+            <a href="#" id="float-4" class="float">
               <i class="fa fa-camera my-float"></i>
             </a>
-            <a href="#" class="float float-5">
+            <a href="#" id="float-5" class="float">
               <i class="fa fas fa-photo-video my-float"></i>
             </a>
             <div class="cc-message-received sb-l">
@@ -503,7 +498,9 @@
           <div class="cc-message-input bg-dark p-3">
             <div class="d-flex">
               <i class="far fa-laugh fa-lg cc-nav-icon p-2"></i>
-              <i class="fas fa-paperclip fa-lg cc-nav-icon mx-2 p-2"></i>
+              <a href="#" onclick="toggleAttachButtons()"
+                ><i class="fas fa-paperclip fa-lg cc-nav-icon mx-2 p-2"></i
+              ></a>
               <input
                 type="text"
                 class="form-control text-white cc-chat-search"
@@ -523,20 +520,67 @@
     ></script>
     <script>
       function openLeftNav() {
-        document.getElementById('mySidebarLeft').style.left = '0';
+        document.getElementById('sidebarLeft').style.left = '0';
       }
 
       function openRightNav() {
-        document.getElementById('mySidebarRight').style.right = '0';
+        document.getElementById('sidebarRight').style.right = '0';
       }
 
-      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+      /* Set the width of the cc-sidebar to 0 and the left margin of the page content to 0 */
       function closeLeftNav() {
-        document.getElementById('mySidebarLeft').style.left = '-25%';
+        document.getElementById('sidebarLeft').style.left = '-25%';
       }
 
       function closeRightNav() {
-        document.getElementById('mySidebarRight').style.right = '-25%';
+        document.getElementById('sidebarRight').style.right = '-25%';
+      }
+
+      var active = false;
+      function toggleAttachButtons() {
+        if (!active) {
+          active = true;
+          console.log('Set to active');
+          document.getElementById('float-1').style.transform =
+            'translateY(-360px)';
+          document.getElementById('float-2').style.transform =
+            'translateY(-280px)';
+          document.getElementById('float-3').style.transform =
+            'translateY(-200px)';
+          document.getElementById('float-4').style.transform =
+            'translateY(-120px)';
+          document.getElementById('float-5').style.transform =
+            'translateY(-40px)';
+          var floats = document.getElementsByClassName('float');
+          for (var i = 0; i < floats.length; i++) {
+            floats[i].style.opacity = '1';
+            floats[i].style.width = '60px';
+            floats[i].style.height = '60px';
+            floats[i].style.color = '#fff';
+            floats[i].style.left = '4%';
+          }
+        } else {
+          active = false;
+          console.log('Set to Inactive');
+
+          document.getElementById('float-1').style.transform =
+            'translateY(0px)';
+          document.getElementById('float-2').style.transform =
+            'translateY(0px)';
+          document.getElementById('float-3').style.transform =
+            'translateY(0px)';
+          document.getElementById('float-4').style.transform =
+            'translateY(0px)';
+          document.getElementById('float-5').style.transform =
+            'translateY(0px)';
+          var floats = document.getElementsByClassName('float');
+          for (var i = 0; i < floats.length; i++) {
+            floats[i].style.opacity = '0';
+            floats[i].style.width = '0px';
+            floats[i].style.height = '0px';
+            floats[i].style.left = '6%';
+          }
+        }
       }
     </script>
   </body>

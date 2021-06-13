@@ -4,6 +4,11 @@ body {
   background: #111214;
 }
 
+.cc-chatroom-list {
+  overflow-y: auto;
+  height: 100%;
+}
+
 .navbar {
   background: #343a40;
   border-bottom: 1px #212529 solid;
@@ -34,15 +39,31 @@ body {
 
 .cc-profile-pic.status {
   border: #25d366 3px solid;
-  max-height: 56px;
+  max-height: 64px;
+  margin: 0;
+  margin-right: 32px;
+  margin-bottom: 10px;
+}
+
+.cc-profile-pic.status:hover {
+  max-height: 68px;
+  margin: 0;
+  margin-right: 28px;
+  margin-bottom: 6px;
+  cursor: pointer;
 }
 
 .cc-profile-pic.status.multi {
   border: #25d366 4px dashed;
-  max-height: 60px;
+}
+
+.cc-divider {
+  margin-bottom: 0;
+  color: grey;
 }
 
 .cc-chat-room {
+  z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,11 +73,29 @@ body {
           flex-flow: row;
   color: white;
   padding: 1rem;
+  padding-bottom: 0;
   background: #212529;
 }
 
-.cc-chat-room.status {
+.cc-chat-room.status, .cc-chat-room.status:hover {
+  margin: 1em;
   background-color: #141414;
+  cursor: default;
+}
+
+.cc-chat-room .cc-story {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  padding-left: 0.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cc-chat-room.active {
@@ -131,6 +170,10 @@ form {
   border-radius: 1em;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.cc-header-left {
+  z-index: 100;
 }
 
 .fa-stack {
@@ -231,6 +274,7 @@ form {
 }
 
 .cc-message-stream {
+  overflow-y: auto;
   position: relative;
   padding: 0 6em;
   display: -webkit-box;
@@ -247,53 +291,18 @@ form {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: 100%;
-}
-
-.cc-message-stream:hover .float {
-  opacity: 1;
-  width: 60px;
-  height: 60px;
-  left: 4%;
-  color: #fff;
-}
-
-.cc-message-stream:hover .float.float-1 {
-  -webkit-transform: translateY(-380px);
-          transform: translateY(-380px);
-}
-
-.cc-message-stream:hover .float.float-2 {
-  -webkit-transform: translateY(-300px);
-          transform: translateY(-300px);
-}
-
-.cc-message-stream:hover .float.float-3 {
-  -webkit-transform: translateY(-220px);
-          transform: translateY(-220px);
-}
-
-.cc-message-stream:hover .float.float-4 {
-  -webkit-transform: translateY(-140px);
-          transform: translateY(-140px);
-}
-
-.cc-message-stream:hover .float.float-5 {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
+  /*Make the buttons above the attchment icon*/
 }
 
 .cc-message-stream .float {
-  display: none;
   opacity: 0;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  left: 6%;
-  width: 0px;
-  height: 0px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  left: 4%;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -303,27 +312,25 @@ form {
   position: absolute;
   border-radius: 50%;
   z-index: 100;
-  -webkit-box-shadow: 2px 2px 3px #212529;
-          box-shadow: 2px 2px 3px #212529;
 }
 
-.cc-message-stream .float.float-1 {
+.cc-message-stream .float#float-1 {
   background-color: #447cec;
 }
 
-.cc-message-stream .float.float-2 {
+.cc-message-stream .float#float-2 {
   background-color: #14acf4;
 }
 
-.cc-message-stream .float.float-3 {
+.cc-message-stream .float#float-3 {
   background-color: #5c64cc;
 }
 
-.cc-message-stream .float.float-4 {
+.cc-message-stream .float#float-4 {
   background-color: #ec447c;
 }
 
-.cc-message-stream .float.float-5 {
+.cc-message-stream .float#float-5 {
   background-color: #bc5ccc;
 }
 
@@ -331,6 +338,7 @@ form {
   font-size: 1.5em;
 }
 
+/*Show the sender name and the message in grey*/
 .cc-message-received {
   padding: 0 1em;
   background: #343a40;
@@ -350,12 +358,14 @@ form {
   margin-bottom: 1em;
 }
 
+/*Different sender name colors based on sender (group)*/
 .cc-sender-name {
   color: #6cb988;
   font-weight: bold;
   font-size: 0.9em;
 }
 
+/*Time and seen status inside the message stream*/
 .cc-message-tag {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,6 +380,7 @@ form {
       align-self: flex-end;
 }
 
+/*Show your message in green*/
 .cc-message-sent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,7 +400,7 @@ form {
   margin-bottom: 0.25em;
 }
 
-/* speech bubble 13 */
+/*Chat tail for the sent messages*/
 .sb-r:before {
   content: '';
   position: absolute;
@@ -402,7 +413,7 @@ form {
   top: 0px;
 }
 
-/* speech bubble 14 */
+/*Chat tail for the receievd messages*/
 .sb-l:before {
   content: '';
   position: absolute;
@@ -415,7 +426,12 @@ form {
   top: 0px;
 }
 
-.sidebar {
+.dropdown-item,
+.dropdown-item:hover {
+  color: white;
+}
+
+.cc-sidebar {
   height: 100%;
   /* 100% Full-height */
   width: 25%;
@@ -431,19 +447,19 @@ form {
   /* Disable horizontal scroll */
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidebar */
+  /* 0.5 second transition effect to slide in the cc-sidebar */
 }
 
-.sidebar.left {
+.cc-sidebar.cc-sidebar-left {
   left: -25%;
 }
 
-.sidebar.right {
+.cc-sidebar.cc-sidebar-right {
   right: -25%;
 }
 
-/* The sidebar links */
-.sidebar a {
+/* The cc-sidebar links */
+.cc-sidebar a {
   text-decoration: none;
   font-size: 1.5em;
   color: #818181;
@@ -453,12 +469,12 @@ form {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
+.cc-sidebar a:hover {
   color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidebar .closebtn {
+.cc-sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
