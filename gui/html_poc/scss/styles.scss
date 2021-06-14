@@ -378,6 +378,49 @@ form {
   transition: 0.5s; /* 0.5 second transition effect to slide in the cc-sidebar */
 }
 
+#sidebarBottom {
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  height: 0px;
+  background-color: $color-highlight-dark;
+}
+
+#emojiTabs {
+  margin-top: 0.3em;
+  margin: auto;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.8em;
+  color: $color-highlight;
+
+  .cc-emoji-tab {
+    flex: 1 0 auto;
+    text-decoration: none;
+    color: $color-highlight;
+  }
+}
+
+.cc-emoji-search,
+.cc-emoji-search:focus {
+  background: $color-highlight-muted;
+  border-radius: 0.4em;
+  margin: auto;
+  max-width: 98%;
+  margin-top: 1em;
+  display: none;
+
+  input,
+  input:focus {
+    background: $color-highlight-muted;
+    color: white;
+    border-radius: 1em;
+    box-shadow: none;
+  }
+}
+
 /* The cc-sidebar links */
 .cc-sidebar a {
   text-decoration: none;

@@ -395,6 +395,8 @@
         <!--END OF CHAT ROOMS-->
         <!--MAIN CHAT-->
         <div class="col-9 h-100" id="main">
+          <!--SIDEBAR RIGHT-->
+          <!--END OF SIDEBAR RIGHT-->
           <!--NAVBAR -->
           <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
@@ -495,9 +497,52 @@
           </div>
           <!--END OF MESSAGE STREAM-->
           <!--NEW INPUT-->
+          <div id="sidebarBottom">
+            <div id="emojiTabs">
+              <a href="#" onclick="setSelected(0)" class="cc-emoji-tab"
+                ><i class="fas fa-clock p-2"></i
+              ></a>
+
+              <a href="#" onclick="setSelected(1)" class="cc-emoji-tab"
+                ><i class="fa fa-smile p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(2)" class="cc-emoji-tab"
+                ><i class="fas fa-paw p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(3)" class="cc-emoji-tab"
+                ><i class="fas fa-mug-hot p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(4)" class="cc-emoji-tab"
+                ><i class="fas fa-volleyball-ball p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(5)" class="cc-emoji-tab"
+                ><i class="fas fa-car-side p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(6)" class="cc-emoji-tab"
+                ><i class="fas fa-lightbulb p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(7)" class="cc-emoji-tab"
+                ><i class="fas fa-hashtag p-2"></i
+              ></a>
+              <a href="#" onclick="setSelected(8)" class="cc-emoji-tab"
+                ><i class="fas fa-flag p-2"></i
+              ></a>
+            </div>
+            <div id="emojiSearch" class="input-group cc-emoji-search">
+              <input
+                type="text"
+                class="form-control border-0"
+                placeholder="Search Emoji"
+              />
+            </div>
+          </div>
+
           <div class="cc-message-input bg-dark p-3">
             <div class="d-flex">
-              <i class="far fa-laugh fa-lg cc-nav-icon p-2"></i>
+              <a href="#" onclick="toggleEmojis()"
+                ><i class="far fa-laugh fa-lg cc-nav-icon p-2"></i
+              ></a>
+
               <a href="#" onclick="toggleAttachButtons()"
                 ><i class="fas fa-paperclip fa-lg cc-nav-icon mx-2 p-2"></i
               ></a>
@@ -519,6 +564,10 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      var buttonsActive = false;
+      var emojisActive = false;
+      var selectedEmoji = 0;
+
       function openLeftNav() {
         document.getElementById('sidebarLeft').style.left = '0';
       }
@@ -535,12 +584,41 @@
       function closeRightNav() {
         document.getElementById('sidebarRight').style.right = '-25%';
       }
+      function toggleEmojis() {
+        if (!emojisActive) {
+          buttonsActive = true;
+          emojisActive = true;
+          toggleAttachButtons();
+          document.getElementById('emojiSearch').style.display = 'flex';
+          document.getElementById('sidebarBottom').style.height = '800px';
+        } else {
+          emojisActive = false;
+          document.getElementById('emojiSearch').style.display = 'none';
+          document.getElementById('sidebarBottom').style.height = '0px';
+        }
+      }
 
-      var active = false;
+      function setSelected(id) {
+        selectedEmoji = id;
+        console.log(selectedEmoji);
+        var elements = document.getElementsByClassName('cc-emoji-tab');
+        for (var i = 0; i < elements.length; i++) {
+          if (i == selectedEmoji) {
+            console.log(`setting for : ${selectedEmoji}`);
+            elements[i].style['borderBottom'] = '#25d366 5px solid';
+            elements[i].style.color = 'white';
+          } else {
+            elements[i].style.color = '#a8a8a8';
+            elements[i].style['borderBottom'] = null;
+          }
+        }
+      }
+
       function toggleAttachButtons() {
-        if (!active) {
-          active = true;
-          console.log('Set to active');
+        if (!buttonsActive) {
+          buttonsActive = true;
+          emojisActive = true;
+          toggleEmojis();
           document.getElementById('float-1').style.transform =
             'translateY(-360px)';
           document.getElementById('float-2').style.transform =
@@ -560,9 +638,7 @@
             floats[i].style.left = '4%';
           }
         } else {
-          active = false;
-          console.log('Set to Inactive');
-
+          buttonsActive = false;
           document.getElementById('float-1').style.transform =
             'translateY(0px)';
           document.getElementById('float-2').style.transform =

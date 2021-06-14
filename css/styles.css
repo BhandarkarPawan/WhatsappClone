@@ -1,0 +1,31 @@
+.spotlight {
+  background: lightblue;
+}
+
+.main-menu {
+  background-color: coral;
+}
+
+.footer {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background: coral;
+}
+
+.sandbox {
+  background: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.message-inline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+/*# sourceMappingURL=styles.css.map */
