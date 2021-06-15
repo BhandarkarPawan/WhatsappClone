@@ -538,4 +538,38 @@ form {
   font-size: 36px;
   margin-left: 50px;
 }
+
+.cc-desc-img {
+  border-radius: 50%;
+  margin-top: 2em;
+}
+
+.cc-desc-section {
+  padding: 1.5em 3em;
+  border-bottom: 1em #131313 solid;
+}
+
+.cc-split-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cc-bordered {
+  border: 1px #25d366 solid;
+  border-radius: 1px;
+  padding: 0 5px;
+  font-size: small;
+}
 /*# sourceMappingURL=styles.css.map */

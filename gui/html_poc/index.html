@@ -116,6 +116,111 @@
             </header>
           </div>
           <!--END OF SIDEBAR RIGHT-->
+          <!--CHAT DESC-->
+          <div id="chatDesc" class="cc-sidebar cc-sidebar-right">
+            <header class="sticky-top">
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeChatDesc()"
+                    ><i class="fas fa-times"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">Group Info</h5>
+                </div>
+              </nav>
+            </header>
+            <div class="text-center">
+              <img src="img/Fall bois.jpeg" class="cc-desc-img" />
+            </div>
+
+            <div class="cc-desc-section">
+              <div class="cc-split-text">
+                <h4>Fall Bois</h4>
+                <i class="fas fa-edit"></i>
+              </div>
+              <p class="text-secondary">Created on 9/5/2020 at 6:47 PM</p>
+            </div>
+            <div class="cc-desc-section">
+              <p class="cc-unread-notif">Description</p>
+              <div class="cc-split-text">
+                <p>Add Group Description</p>
+                <i class="fas fa-edit"></i>
+              </div>
+            </div>
+            <div class="cc-desc-section">
+              <div class="cc-split-text">
+                <p class="cc-unread-notif">Media, Links and Docs</p>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="cc-desc-section">
+              <div class="cc-split-text">
+                <p>Mute Notifications</p>
+                <i class="far fa-square"></i>
+              </div>
+              <hr class="cc-divider text-white my-1" />
+              <div class="cc-split-text pt-2">
+                <p>Starred Messages</p>
+                <i class="far fa-arrow-right"></i>
+              </div>
+              <hr class="cc-divider text-white my-1" />
+              <div class="cc-split-text pt-2">
+                <p class="mb-0">Disappearing Messages</p>
+                <i class="far fa-arrow-right"></i>
+              </div>
+              <p class="text-secondary">Off</p>
+              <hr class="cc-divider text-white my-1" />
+            </div>
+            <div class="cc-desc-section">
+              <div class="cc-split-text">
+                <p class="cc-unread-notif">5 Participants</p>
+                <i class="fas fa-search"></i>
+              </div>
+              <hr class="cc-divider text-white my-1" />
+              <div class="cc-chat-room pb-0">
+                <img src="img/profile.jpeg" class="cc-profile-pic" />
+                <div class="d-flex flex-column w-100">
+                  <h6>You</h6>
+                  <div class="cc-text">
+                    <div class="text-muted">Carpe Diem!</div>
+                  </div>
+                  <hr class="cc-divider" />
+                </div>
+              </div>
+              <div class="cc-chat-room pb-0">
+                <img src="img/kshitij.jpeg" class="cc-profile-pic" />
+                <div class="d-flex flex-column w-100">
+                  <h6>Kshitij</h6>
+                  <div class="cc-text">
+                    <div class="text-muted">Available!</div>
+                  </div>
+                  <hr class="cc-divider" />
+                </div>
+              </div>
+              <div class="cc-chat-room pb-0">
+                <img src="img/hemanth.jpeg" class="cc-profile-pic" />
+                <div class="d-flex flex-column w-100">
+                  <div class="cc-split-text">
+                    <h6>Hemanth Kamath</h6>
+                    <p class="cc-unread-notif cc-bordered">Admin</p>
+                  </div>
+                  <div class="cc-text">
+                    <div class="text-muted">Busy</div>
+                  </div>
+                  <hr class="cc-divider" />
+                </div>
+              </div>
+            </div>
+            <div class="cc-desc-section">
+              <i class="fas fa-sign-out-alt pe-3 text-danger d-inline"></i>
+              <h5 class="text-danger d-inline">Exit Group</h5>
+            </div>
+            <div class="cc-desc-section">
+              <i class="fas fa-thumbs-down pe-3 text-danger d-inline"></i>
+              <h5 class="text-danger d-inline">Report Group</h5>
+            </div>
+          </div>
+          <!--END OF CHAT DESC-->
+
           <!--NAVBAR-->
           <header class="cc-header-left sticky-top">
             <nav class="navbar navbar-dark">
@@ -401,7 +506,9 @@
           <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
               <div class="d-flex flex-row">
-                <img src="img/Fall bois.jpeg" class="cc-profile-pic" />
+                <a href="#" onclick="openChatDesc()"
+                  ><img src="img/Fall bois.jpeg" class="cc-profile-pic"
+                /></a>
                 <div class="px-3 d-flex flex-column">
                   <h6 class="text-white mt-1 mb-0">Fall Bois</h6>
                   <small class="text-muted">
@@ -574,6 +681,14 @@
 
       function openRightNav() {
         document.getElementById('sidebarRight').style.right = '0';
+      }
+
+      function openChatDesc() {
+        document.getElementById('chatDesc').style.right = '0';
+      }
+
+      function closeChatDesc() {
+        document.getElementById('chatDesc').style.right = '-25%';
       }
 
       /* Set the width of the cc-sidebar to 0 and the left margin of the page content to 0 */
