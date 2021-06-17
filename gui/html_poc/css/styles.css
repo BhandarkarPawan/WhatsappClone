@@ -572,4 +572,55 @@ form {
   padding: 0 5px;
   font-size: small;
 }
+
+.cc-btn-circle {
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+}
+
+.cc-btn-circle:hover i {
+  color: #212529;
+}
+
+.cc-blinker {
+  font-size: 1.2em;
+  margin: 0 0.5em;
+  -webkit-animation: blink 1.5s linear infinite;
+          animation: blink 1.5s linear infinite;
+}
+
+.recorder {
+  -webkit-transform: 1s ease-in-out;
+          transform: 1s ease-in-out;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#timer {
+  color: #c5c5c5;
+  margin-right: 0.8em;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -468,3 +468,44 @@ form {
   padding: 0 5px;
   font-size: small;
 }
+
+.cc-btn-circle {
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+
+  &:hover {
+    i {
+      color: $color-highlight-dark;
+    }
+  }
+}
+
+.cc-blinker {
+  font-size: 1.2em;
+  margin: 0 0.5em;
+  animation: blink 1.5s linear infinite;
+}
+
+.recorder {
+  transform: 1s ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#timer {
+  color: $color-highlight-light;
+  margin-right: 0.8em;
+}

@@ -658,7 +658,11 @@
                 class="form-control text-white cc-chat-search"
                 placeholder="Type a message"
               />
-              <i class="fas fa-microphone fa-lg cc-nav-icon mx-2 p-2"></i>
+              <div id="recorder" class="mx-4">
+                <a href="#" onclick="switchRecorder()"
+                  ><i class="fas fa-microphone fa-lg cc-nav-icon mx-2 p-2"></i
+                ></a>
+              </div>
             </div>
           </div>
           <!--END OF NEW INPUT-->
@@ -772,6 +776,57 @@
             floats[i].style.left = '6%';
           }
         }
+      }
+
+      const micWaiting =
+        '<a href="#" onclick="switchRecorder()"><i class="fas fa-microphone fa-lg cc-nav-icon mx-2 p-2"></i></a>';
+      const micRecording = `
+        <div class="d-flex flew-row align-items-center">
+          <button
+            class="cc-btn-circle btn btn-outline-danger"
+            onclick="switchRecorder()"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+          <i class="cc-blinker fas fa-circle text-danger"></i>
+          <h4 id="timer">0:00</h4>
+          <button
+            class="cc-btn-circle btn btn-outline-success"
+            onclick="switchRecorder()"
+          >
+            <i class="fas fa-check"></i>
+          </button>
+        </div>
+      `;
+      var seconds = 0;
+      var minutes = 0;
+      var interval = setInterval(function () {
+        // Display 'counter' wherever you want to display it.
+        if (seconds == 60) {
+          minutes++;
+          seconds = 0;
+        }
+        seconds++;
+        var timer = document.getElementById('timer');
+        if (timer) {
+          const displaySeconds = seconds < 10 ? `0${seconds}` : seconds;
+          timer.innerHTML = `${minutes}:${displaySeconds}`;
+        }
+      }, 1000);
+
+      var waiting = false;
+      function switchRecorder() {
+        minutes = 0;
+        seconds = 0;
+
+        const element = waiting ? micWaiting : micRecording;
+        waiting = !waiting;
+        var counter = 0;
+        var recorderDiv = document.getElementById('recorder');
+        recorderDiv.innerHTML = '';
+        recorderDiv.innerHTML = element;
+
+        console.log('Done:');
       }
     </script>
   </body>
