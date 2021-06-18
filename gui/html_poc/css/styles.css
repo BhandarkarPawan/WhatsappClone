@@ -623,4 +623,46 @@ form {
   color: #c5c5c5;
   margin-right: 0.8em;
 }
+
+.cc-profile-img {
+  opacity: 1;
+  width: 50%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border-radius: 50%;
+  margin-top: 3em;
+  width: 50%;
+}
+
+.cc-overlay {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cc-overlay-image {
+  position: relative;
+}
+
+.cc-overlay-image:hover .cc-profile-img {
+  opacity: 0.3;
+}
+
+.cc-overlay-image:hover .cc-overlay {
+  opacity: 1;
+}
+
+.cc-overlay-text {
+  color: white;
+  font-size: 16px;
+  padding: 4em;
+  padding-top: 6em;
+}
 /*# sourceMappingURL=styles.css.map */

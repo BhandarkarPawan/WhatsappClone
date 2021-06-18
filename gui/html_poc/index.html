@@ -117,6 +117,49 @@
           </div>
           <!--END OF SIDEBAR RIGHT-->
           <!--CHAT DESC-->
+          <div id="profileInfo" class="cc-sidebar cc-sidebar-left">
+            <header class="sticky-top">
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeProfileInfo()"
+                    ><i class="fas fa-arrow-left"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">Profile</h5>
+                </div>
+              </nav>
+            </header>
+            <div class="cc-overlay-image text-center">
+              <img src="img/profile.jpeg" class="cc-profile-img" />
+              <div class="cc-overlay">
+                <div class="cc-overlay-text">
+                  <i class="fas fa-camera fa-2x text-white"></i>CHANGE PROFILE
+                  PHOTO
+                </div>
+              </div>
+            </div>
+
+            <div class="px-5 py-5">
+              <p class="cc-unread-notif pb-1">Your Name</p>
+              <div class="cc-split-text">
+                <h5>Pawan Bhandarkar</h5>
+                <i class="fas fa-edit"></i>
+              </div>
+              <hr class="cc-divider mb-3" />
+              <p class="text-secondary pb-3">
+                This is not your username or pin. This name will be visible to
+                your WhatAapp contacts.
+              </p>
+              <p class="cc-unread-notif pb-1">About</p>
+              <div class="cc-split-text">
+                <h5>Carpe Diem!</h5>
+                <i class="fas fa-edit"></i>
+              </div>
+              <hr class="cc-divider mb-3" />
+            </div>
+          </div>
+          <!--END OF CHAT DESC-->
+
+          <!--CHAT DESC-->
           <div id="chatDesc" class="cc-sidebar cc-sidebar-right">
             <header class="sticky-top">
               <nav class="navbar navbar-dark pt-4">
@@ -224,7 +267,9 @@
           <!--NAVBAR-->
           <header class="cc-header-left sticky-top">
             <nav class="navbar navbar-dark">
-              <img src="img/profile.jpeg" class="cc-profile-pic" />
+              <a href="#" onclick="openProfileInfo()"
+                ><img src="img/profile.jpeg" class="cc-profile-pic"
+              /></a>
               <div id="icons" class="d-flex justify-content-between">
                 <a href="status.html" class="cc-nav-icon"
                   ><i class="fa fa-circle-o"></i
@@ -689,6 +734,14 @@
 
       function openChatDesc() {
         document.getElementById('chatDesc').style.right = '0';
+      }
+
+      function openProfileInfo() {
+        document.getElementById('profileInfo').style.left = '0';
+      }
+
+      function closeProfileInfo() {
+        document.getElementById('profileInfo').style.left = '-25%';
       }
 
       function closeChatDesc() {
