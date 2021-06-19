@@ -573,6 +573,10 @@ form {
   font-size: small;
 }
 
+.cc-bordered.cc-unread-text {
+  border: 1px #a8a8a8 solid;
+}
+
 .cc-btn-circle {
   border-radius: 50%;
   height: 42px;

@@ -296,6 +296,111 @@
           </div>
           <!--END OF NEW GROUP INFO-->
 
+          <!--NEW GROUP INFO-->
+          <div id="archived" class="cc-sidebar cc-sidebar-left">
+            <header class="sticky-top">
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeLeftSidebar('archived')"
+                    ><i class="fas fa-arrow-left"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">Archived Chats</h5>
+                </div>
+              </nav>
+            </header>
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Vishnu's Birthday</h6>
+                  <small class="cc-unread-text">5/24/2020</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Vishnu's Birthday</h6>
+                  <small class="cc-unread-text">5/24/2020</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Vishnu's Birthday</h6>
+                  <small class="cc-unread-text">5/24/2020</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Round Table Discussion</h6>
+                  <small class="cc-unread-text">8/5/2020</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Fall 2020 CS</h6>
+                  <small class="cc-unread-text">3/17/2020</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/defaultgroup.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <div class="cc-text">
+                  <h6 class="text-white">Japan Internship</h6>
+                  <small class="cc-unread-text">11/1/2019</small>
+                </div>
+                <div class="cc-text">
+                  <div class="cc-unread-text">You were added</div>
+                  <p class="cc-unread-text cc-bordered">Archived</p>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+          </div>
+
+          <!--END OF NEW GROUP INFO-->
+
           <!--CHAT DESC-->
           <div id="chatDesc" class="cc-sidebar cc-sidebar-right">
             <header class="sticky-top">
@@ -435,13 +540,20 @@
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Create a Room</a>
+                      <a
+                        class="dropdown-item"
+                        onclick="openLeftSidebar('profileInfo')"
+                        href="#"
+                        >Profile</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Profile</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Archived</a>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="openLeftSidebar('archived')"
+                        >Archived</a
+                      >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">Starred</a>

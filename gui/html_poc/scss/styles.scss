@@ -467,6 +467,10 @@ form {
   border-radius: 1px;
   padding: 0 5px;
   font-size: small;
+
+  &.cc-unread-text {
+    border: 1px $color-highlight solid;
+  }
 }
 
 .cc-btn-circle {
