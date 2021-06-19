@@ -93,7 +93,7 @@
             <header>
               <nav class="navbar navbar-dark pt-4">
                 <div class="text-white mx-0 d-flex flex-row">
-                  <a href="#" onclick="closeRightNav()"
+                  <a href="#" onclick="closeRightSidebar('sidebarRight')"
                     ><i class="fas fa-times"></i
                   ></a>
                   <h5 class="ps-5 cc-text">Search Message</h5>
@@ -162,6 +162,71 @@
             </div>
           </div>
           <!--END OF PROFILE INFO-->
+
+          <!--SETTINGS-->
+          <div id="settings" class="cc-sidebar cc-sidebar-left">
+            <header class="sticky-top">
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeLeftSidebar('settings')"
+                    ><i class="fas fa-arrow-left"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">Settings</h5>
+                </div>
+              </nav>
+            </header>
+            <div class="cc-chat-room pb-3">
+              <img src="img/profile.jpeg" class="cc-profile-pic cc-img-large" />
+              <div class="d-flex flex-column ps-3 justify-content-center w-100">
+                <h4>Pawan Bhandarkar</h4>
+                <p class="text-muted">Carpe Diem!</p>
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block mx-4 my-1 w-100">
+                <i class="fas fa-bell d-inline"></i>
+                <p class="ps-4 d-inline">Notifications</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block mx-4 my-1 w-100">
+                <i class="fas fa-adjust d-inline"></i>
+                <p class="ps-4 d-inline">Theme</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block mx-4 my-1 w-100">
+                <i class="far fa-image d-inline"></i>
+                <p class="ps-4 d-inline">Chat Wallpaper</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block mx-4 my-1 w-100">
+                <i class="fas fa-ban d-inline"></i>
+                <p class="ps-4 d-inline">Blocked</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block w-100 mx-4 my-1">
+                <i class="fas fa-keyboard d-inline"></i>
+                <p class="ps-4 d-inline">Keyboard Shortcuts</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+            <div class="cc-chat-room">
+              <div class="d-block mx-4 my-1 w-100">
+                <i class="fas fa-question-circle d-inline"></i>
+                <p class="ps-4 d-inline">Help</p>
+                <hr class="cc-divider cc-divider-2" />
+              </div>
+            </div>
+          </div>
+
+          <!--END OF SETTINGS-->
 
           <!--NEW GROUP INFO-->
           <div id="newGroup" class="cc-sidebar cc-sidebar-left">
@@ -406,7 +471,7 @@
             <header class="sticky-top">
               <nav class="navbar navbar-dark pt-4">
                 <div class="text-white mx-0 d-flex flex-row">
-                  <a href="#" onclick="closeLeftSidebar('chatDesc')"
+                  <a href="#" onclick="closeRightSidebar('chatDesc')"
                     ><i class="fas fa-times"></i
                   ></a>
                   <h5 class="ps-5 cc-text">Group Info</h5>
@@ -559,7 +624,12 @@
                       <a class="dropdown-item" href="#">Starred</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Settings</a>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="openLeftSidebar('settings')"
+                        >Settings</a
+                      >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">Logout</a>
@@ -808,7 +878,7 @@
           <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
               <div class="d-flex flex-row">
-                <a href="#" onclick="openSidebarLeft('chatDesc')"
+                <a href="#" onclick="openRightSidebar('chatDesc')"
                   ><img src="img/Fall bois.jpeg" class="cc-profile-pic"
                 /></a>
                 <div class="px-3 d-flex flex-column">
@@ -819,7 +889,10 @@
                 </div>
               </div>
               <div id="icons-main" class="d-flex justify-content-between">
-                <a href="#" class="cc-nav-icon" onclick="openRightNav()"
+                <a
+                  href="#"
+                  class="cc-nav-icon"
+                  onclick="openRightSidebar('sidebarRight')"
                   ><i class="fa fa-search"></i
                 ></a>
                 <div class="dropdown">
@@ -981,8 +1054,8 @@
       var emojisActive = false;
       var selectedEmoji = 0;
 
-      function openRightNav() {
-        document.getElementById('sidebarRight').style.right = '0';
+      function openRightSidebar(id) {
+        document.getElementById(id).style.right = '0';
       }
 
       function openLeftSidebar(id) {
@@ -993,8 +1066,8 @@
         document.getElementById(id).style.left = '-25%';
       }
 
-      function closeRightNav() {
-        document.getElementById('sidebarRight').style.right = '-25%';
+      function closeRightSidebar(id) {
+        document.getElementById(id).style.right = '-25%';
       }
       function toggleEmojis() {
         if (!emojisActive) {

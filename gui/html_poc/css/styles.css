@@ -37,6 +37,11 @@ body {
   max-height: 50px;
 }
 
+.cc-profile-pic.cc-img-large {
+  max-height: 100px;
+  border-radius: 50%;
+}
+
 .cc-profile-pic.status {
   border: #25d366 3px solid;
   max-height: 64px;
@@ -77,10 +82,20 @@ body {
   background: #212529;
 }
 
+.cc-chat-room .cc-divider-2 {
+  width: 90%;
+  margin-left: 2.2em;
+  margin-bottom: 0;
+}
+
 .cc-chat-room.status, .cc-chat-room.status:hover {
   margin: 1em;
   background-color: #141414;
   cursor: default;
+}
+
+.cc-chat-room p {
+  font-size: 1.2em;
 }
 
 .cc-chat-room .cc-story {
