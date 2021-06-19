@@ -28,7 +28,10 @@
           <div id="sidebarLeft" class="cc-sidebar cc-sidebar-left">
             <header>
               <nav class="navbar navbar-dark d-block pt-5">
-                <a class="d-inline" href="#" onclick="closeLeftNav()"
+                <a
+                  class="d-inline"
+                  href="#"
+                  onclick="closeLeftSidebar('sidebarLeft')"
                   ><i class="fas fa-arrow-left"></i
                 ></a>
                 <h4 class="d-inline ps-5 cc-text">New Chat</h4>
@@ -116,18 +119,19 @@
             </header>
           </div>
           <!--END OF SIDEBAR RIGHT-->
-          <!--CHAT DESC-->
+          <!--PROFILE INFO-->
           <div id="profileInfo" class="cc-sidebar cc-sidebar-left">
             <header class="sticky-top">
               <nav class="navbar navbar-dark pt-4">
                 <div class="text-white mx-0 d-flex flex-row">
-                  <a href="#" onclick="closeProfileInfo()"
+                  <a href="#" onclick="closeLeftSidebar('profileInfo')"
                     ><i class="fas fa-arrow-left"></i
                   ></a>
                   <h5 class="ps-5 cc-text">Profile</h5>
                 </div>
               </nav>
             </header>
+
             <div class="cc-overlay-image text-center">
               <img src="img/profile.jpeg" class="cc-profile-img" />
               <div class="cc-overlay">
@@ -157,14 +161,147 @@
               <hr class="cc-divider mb-3" />
             </div>
           </div>
-          <!--END OF CHAT DESC-->
+          <!--END OF PROFILE INFO-->
+
+          <!--NEW GROUP INFO-->
+          <div id="newGroup" class="cc-sidebar cc-sidebar-left">
+            <header class="sticky-top">
+              <nav class="navbar navbar-dark pt-4">
+                <div class="text-white mx-0 d-flex flex-row">
+                  <a href="#" onclick="closeLeftSidebar('newGroup')"
+                    ><i class="fas fa-arrow-left"></i
+                  ></a>
+                  <h5 class="ps-5 cc-text">New Group</h5>
+                </div>
+              </nav>
+
+              <form>
+                <div class="form-group bg-dark px-4 py-2">
+                  <div class="input-group cc-chat-search cc-group-search">
+                    <input
+                      type="text"
+                      class="form-control border-0"
+                      placeholder="Type a contact name..."
+                    />
+                  </div>
+                </div>
+              </form>
+            </header>
+
+            <p class="cc-unread-notif p-4">A</p>
+            <div class="cc-chat-room pb-0">
+              <img src="img/abhinav.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Abhinav Nayak</h6>
+                <div class="cc-text">
+                  <div class="text-muted">.</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+            <div class="cc-chat-room pb-0">
+              <img src="img/aishvarya.png" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Aishvarya</h6>
+                <div class="cc-text">
+                  <div class="text-muted">Hey There!</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+            <div class="cc-chat-room pb-0">
+              <img src="img/ajey.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Ajey Pai</h6>
+                <div class="cc-text">
+                  <div class="text-muted">
+                    आचरणेन वै धर्मः नराणां ज्ञायते ध्रुवम्।
+                  </div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <div class="cc-chat-room pb-0">
+              <img src="img/hemanth.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Hemanth Kamath</h6>
+                <div class="cc-text">
+                  <div class="text-muted">Busy</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+            <p class="cc-unread-notif p-4">K</p>
+            <div class="cc-chat-room pb-0">
+              <img src="img/kshitij.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Kshitij</h6>
+                <div class="cc-text">
+                  <div class="text-muted">
+                    Finding comfort in the uncomfortable!
+                  </div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <p class="cc-unread-notif p-4">N</p>
+            <div class="cc-chat-room pb-0">
+              <img src="img/nidhi.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Nidhi</h6>
+                <div class="cc-text">
+                  <div class="text-muted">
+                    Entropy increases, things fall apart.
+                  </div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+            <div class="cc-chat-room pb-0">
+              <img src="img/nikhil.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Nikhil Kamath</h6>
+                <div class="cc-text">
+                  <div class="text-muted">Shivoham</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <p class="cc-unread-notif p-4">P</p>
+            <div class="cc-chat-room pb-0">
+              <img src="img/shastry.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Prathviraj Shastry</h6>
+                <div class="cc-text">
+                  <div class="text-muted">I'm like the fight club</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+
+            <p class="cc-unread-notif p-4">S</p>
+            <div class="cc-chat-room pb-0">
+              <img src="img/sri.jpeg" class="cc-profile-pic" />
+              <div class="d-flex flex-column w-100">
+                <h6>Srilakshmi</h6>
+                <div class="cc-text">
+                  <div class="text-muted">Miles to go before I sleep</div>
+                </div>
+                <hr class="cc-divider" />
+              </div>
+            </div>
+          </div>
+          <!--END OF NEW GROUP INFO-->
 
           <!--CHAT DESC-->
           <div id="chatDesc" class="cc-sidebar cc-sidebar-right">
             <header class="sticky-top">
               <nav class="navbar navbar-dark pt-4">
                 <div class="text-white mx-0 d-flex flex-row">
-                  <a href="#" onclick="closeChatDesc()"
+                  <a href="#" onclick="closeLeftSidebar('chatDesc')"
                     ><i class="fas fa-times"></i
                   ></a>
                   <h5 class="ps-5 cc-text">Group Info</h5>
@@ -267,14 +404,17 @@
           <!--NAVBAR-->
           <header class="cc-header-left sticky-top">
             <nav class="navbar navbar-dark">
-              <a href="#" onclick="openProfileInfo()"
+              <a href="#" onclick="openLeftSidebar('profileInfo')"
                 ><img src="img/profile.jpeg" class="cc-profile-pic"
               /></a>
               <div id="icons" class="d-flex justify-content-between">
                 <a href="status.html" class="cc-nav-icon"
                   ><i class="fa fa-circle-o"></i
                 ></a>
-                <a href="#" class="cc-nav-icon" onclick="openLeftNav()"
+                <a
+                  href="#"
+                  class="cc-nav-icon"
+                  onclick="openLeftSidebar('sidebarLeft')"
                   ><i class="fa fa-commenting"></i
                 ></a>
 
@@ -287,7 +427,12 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item" href="#">New Group</a>
+                      <a
+                        class="dropdown-item"
+                        onclick="openLeftSidebar('newGroup')"
+                        href="#"
+                        >New Group</a
+                      >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">Create a Room</a>
@@ -551,7 +696,7 @@
           <header id="cc-main-nav">
             <nav class="navbar navbar-dark">
               <div class="d-flex flex-row">
-                <a href="#" onclick="openChatDesc()"
+                <a href="#" onclick="openSidebarLeft('chatDesc')"
                   ><img src="img/Fall bois.jpeg" class="cc-profile-pic"
                 /></a>
                 <div class="px-3 d-flex flex-column">
@@ -574,7 +719,7 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item" href="#">Contact Info</a>
+                      <a class="dropdown-item" href="#">Group Info</a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">Select Messages</a>
@@ -724,33 +869,16 @@
       var emojisActive = false;
       var selectedEmoji = 0;
 
-      function openLeftNav() {
-        document.getElementById('sidebarLeft').style.left = '0';
-      }
-
       function openRightNav() {
         document.getElementById('sidebarRight').style.right = '0';
       }
 
-      function openChatDesc() {
-        document.getElementById('chatDesc').style.right = '0';
+      function openLeftSidebar(id) {
+        document.getElementById(id).style.left = '0';
       }
 
-      function openProfileInfo() {
-        document.getElementById('profileInfo').style.left = '0';
-      }
-
-      function closeProfileInfo() {
-        document.getElementById('profileInfo').style.left = '-25%';
-      }
-
-      function closeChatDesc() {
-        document.getElementById('chatDesc').style.right = '-25%';
-      }
-
-      /* Set the width of the cc-sidebar to 0 and the left margin of the page content to 0 */
-      function closeLeftNav() {
-        document.getElementById('sidebarLeft').style.left = '-25%';
+      function closeLeftSidebar(id) {
+        document.getElementById(id).style.left = '-25%';
       }
 
       function closeRightNav() {
