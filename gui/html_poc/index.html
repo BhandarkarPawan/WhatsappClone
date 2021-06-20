@@ -373,20 +373,6 @@
                 </div>
               </nav>
             </header>
-            <div class="cc-chat-room pb-0">
-              <img src="img/defaultgroup.png" class="cc-profile-pic" />
-              <div class="d-flex flex-column w-100">
-                <div class="cc-text">
-                  <h6 class="text-white">Vishnu's Birthday</h6>
-                  <small class="cc-unread-text">5/24/2020</small>
-                </div>
-                <div class="cc-text">
-                  <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
-                </div>
-                <hr class="cc-divider" />
-              </div>
-            </div>
 
             <div class="cc-chat-room pb-0">
               <img src="img/defaultgroup.png" class="cc-profile-pic" />
@@ -397,22 +383,7 @@
                 </div>
                 <div class="cc-text">
                   <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
-                </div>
-                <hr class="cc-divider" />
-              </div>
-            </div>
-
-            <div class="cc-chat-room pb-0">
-              <img src="img/defaultgroup.png" class="cc-profile-pic" />
-              <div class="d-flex flex-column w-100">
-                <div class="cc-text">
-                  <h6 class="text-white">Vishnu's Birthday</h6>
-                  <small class="cc-unread-text">5/24/2020</small>
-                </div>
-                <div class="cc-text">
-                  <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
+                  <small class="cc-unread-text cc-bordered">Archived</small>
                 </div>
                 <hr class="cc-divider" />
               </div>
@@ -427,7 +398,7 @@
                 </div>
                 <div class="cc-text">
                   <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
+                  <small class="cc-unread-text cc-bordered">Archived</small>
                 </div>
                 <hr class="cc-divider" />
               </div>
@@ -442,7 +413,7 @@
                 </div>
                 <div class="cc-text">
                   <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
+                  <small class="cc-unread-text cc-bordered">Archived</small>
                 </div>
                 <hr class="cc-divider" />
               </div>
@@ -457,7 +428,7 @@
                 </div>
                 <div class="cc-text">
                   <div class="cc-unread-text">You were added</div>
-                  <p class="cc-unread-text cc-bordered">Archived</p>
+                  <small class="cc-unread-text cc-bordered">Archived</small>
                 </div>
                 <hr class="cc-divider" />
               </div>
@@ -551,7 +522,7 @@
                 <div class="d-flex flex-column w-100">
                   <div class="cc-split-text">
                     <h6>Hemanth Kamath</h6>
-                    <p class="cc-unread-notif cc-bordered">Admin</p>
+                    <small class="cc-unread-notif cc-bordered">Admin</small>
                   </div>
                   <div class="cc-text">
                     <div class="text-muted">Busy</div>
@@ -1053,6 +1024,7 @@
       var buttonsActive = false;
       var emojisActive = false;
       var selectedEmoji = 0;
+      setSelected(0);
 
       function openRightSidebar(id) {
         document.getElementById(id).style.right = '0';
