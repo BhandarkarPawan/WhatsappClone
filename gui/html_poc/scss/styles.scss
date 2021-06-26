@@ -310,6 +310,9 @@ form {
   flex-flow: column;
   position: relative;
   margin-bottom: 1em;
+  &.cc-starred {
+    max-width: 100%;
+  }
 }
 
 /*Different sender name colors based on sender (group)*/
@@ -566,4 +569,20 @@ form {
   font-size: 16px;
   padding: 4em;
   padding-top: 6em;
+}
+
+.cc-starred-image {
+  border-radius: 50%;
+  height: 35px;
+}
+
+.cc-starred-message {
+  margin: 1em;
+}
+
+.cc-starred-sender {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  color: white;
 }
