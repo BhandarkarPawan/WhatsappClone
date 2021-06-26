@@ -959,10 +959,20 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item" href="#">Group Info</a>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="openRightSidebar('chatDesc')"
+                        >Group Info</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Select Messages</a>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="toggleSelectMessages(true)"
+                        >Select Messages</a
+                      >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">Mute Notifications</a>
@@ -997,42 +1007,65 @@
             <a href="#" id="float-5" class="float">
               <i class="fa fas fa-photo-video my-float"></i>
             </a>
-            <div class="cc-message-received sb-l">
-              <p class="cc-sender-name">Hemanth Kamath</p>
-              How was Miles Morales?
-              <div class="cc-message-tag">
-                <small class="me-1">12:45 AM</small>
+            <div class="d-flex flex-row w-100 align-content-center">
+              <i class="far fa-square text-white cc-selector"></i>
+              <div class="cc-message-received sb-l">
+                <p class="cc-sender-name">Hemanth Kamath</p>
+                How was Miles Morales?
+                <div class="cc-message-tag">
+                  <small class="me-1">12:45 AM</small>
+                </div>
               </div>
             </div>
-
-            <div class="cc-message-sent sb-r">
-              It was amazing! Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Quibusdam, ratione!
-              <div class="cc-message-tag">
-                <small class="me-1">12:45 AM</small>
-                <i class="fa fa-check-double"></i>
+            <div class="d-flex flex-row w-100 align-content-center">
+              <i class="far fa-square text-white cc-selector"></i>
+              <div class="cc-message-sent sb-r">
+                It was amazing! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Quibusdam, ratione!
+                <div class="cc-message-tag">
+                  <small class="me-1">12:45 AM</small>
+                  <i class="fa fa-check-double"></i>
+                </div>
               </div>
             </div>
-
-            <div class="cc-message-sent">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              quam sequi impedit adipisci asperiores! Corrupti a incidunt
-              deserunt praesentium ipsa?
-              <div class="cc-message-tag">
-                <small class="me-1">12:45 AM</small>
-                <i class="fa fa-check-double"></i>
+            <div class="d-flex flex-row w-100 align-content-center">
+              <i class="far fa-square text-white cc-selector"></i>
+              <div class="cc-message-sent">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt quam sequi impedit adipisci asperiores! Corrupti a
+                incidunt deserunt praesentium ipsa?
+                <div class="cc-message-tag">
+                  <small class="me-1">12:45 AM</small>
+                  <i class="fa fa-check-double"></i>
+                </div>
               </div>
             </div>
-
-            <div class="cc-message-sent">
-              Ipsum, dolor consectetur adipisicing elit. At, iure?
-              <div class="cc-message-tag">
-                <small class="me-1">12:45 AM</small>
-                <i class="fa fa-check-double"></i>
+            <div class="d-flex flex-row w-100 align-content-center">
+              <i class="far fa-square text-white cc-selector"></i>
+              <div class="cc-message-sent">
+                Ipsum, dolor consectetur adipisicing elit. At, iure?
+                <div class="cc-message-tag">
+                  <small class="me-1">12:45 AM</small>
+                  <i class="fa fa-check-double"></i>
+                </div>
               </div>
             </div>
           </div>
           <!--END OF MESSAGE STREAM-->
+          <div id="messageSelector" class="input-group">
+            <div class="d-flex mx-5 text-white">
+              <a href="#" onclick="toggleSelectMessages(false)">
+                <i class="fas text-white fa-times"></i>
+              </a>
+              <p class="ms-5 mb-0">0 Selected</p>
+            </div>
+            <div class="cc-icon-row">
+              <i class="fas fa-star"></i>
+              <i class="far fa-trash"></i>
+              <i class="far fa-share"></i>
+              <i class="far fa-arrow-down"></i>
+            </div>
+          </div>
           <!--NEW INPUT-->
           <div id="sidebarBottom">
             <div id="emojiTabs">
@@ -1108,6 +1141,33 @@
       var buttonsActive = false;
       var emojisActive = false;
       var selectedEmoji = 0;
+      var selectingMessages = false;
+
+      function toggleSelectMessages(state) {
+        selectingMessages = state;
+        console.log(selectingMessages);
+        var element = document.getElementById('messageSelector');
+        var elements = document.getElementsByClassName('cc-selector');
+        const margin = selectingMessages ? '-70px' : '-120px';
+
+        if (selectingMessages) {
+          element.style.transform = 'translateY(-100px)';
+          element.style.display = 'flex';
+
+          for (var i = 0; i < elements.length; i++) {
+            console.log(margin);
+            elements[i].style.transform = 'translateX(120px)';
+          }
+        } else {
+          element.style.transform = 'translateY(0px)';
+          element.style.display = 'None';
+          for (var i = 0; i < elements.length; i++) {
+            console.log(margin);
+            elements[i].style.transform = 'translateX(0px)';
+          }
+        }
+      }
+
       setSelected(0);
 
       function openRightSidebar(id) {

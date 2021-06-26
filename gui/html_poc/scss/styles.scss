@@ -586,3 +586,35 @@ form {
   align-items: center;
   color: white;
 }
+
+.cc-selector {
+  position: absolute;
+  transition: 0.1s;
+  left: -100px;
+  font-size: 1.5em;
+}
+
+#messageSelector {
+  position: absolute;
+  bottom: -100px;
+  font-size: 1.2em;
+  height: 4em;
+  transition: 0.2s;
+  width: 75%;
+  z-index: 1000;
+  display: None;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  background-color: $color-highlight-dark;
+}
+
+.cc-icon-row {
+  width: 18%;
+  display: flex;
+  margin-right: 1em;
+  justify-content: space-around;
+  font-size: 1.2em;
+  color: $color-highlight-muted;
+}
