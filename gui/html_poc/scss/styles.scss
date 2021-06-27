@@ -618,3 +618,45 @@ form {
   font-size: 1.2em;
   color: $color-highlight-muted;
 }
+
+.cc-modal {
+  background-color: $color-highlight-muted;
+  position: absolute;
+  color: $color-highlight-light;
+  left: 50%;
+  max-width: 90%;
+  transform: translate(-30%, 100%);
+}
+
+.cc-modal-dark {
+  background-color: $color-highlight-muted;
+  color: rgb(3, 151, 119);
+  &:hover {
+    color: $color-unread;
+  }
+}
+
+.cc-modal-green {
+  background-color: rgb(3, 151, 119);
+  color: $color-highlight-dark;
+  &:hover {
+    background-color: $color-unread;
+  }
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.modal-body {
+  margin: 0 1em;
+}
+
+.cc-check:checked {
+  border: none;
+  background-color: rgb(3, 151, 119);
+}

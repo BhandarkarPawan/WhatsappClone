@@ -755,4 +755,49 @@ form {
   font-size: 1.2em;
   color: #343a40;
 }
+
+.cc-modal {
+  background-color: #343a40;
+  position: absolute;
+  color: #c5c5c5;
+  left: 50%;
+  max-width: 90%;
+  -webkit-transform: translate(-30%, 100%);
+          transform: translate(-30%, 100%);
+}
+
+.cc-modal-dark {
+  background-color: #343a40;
+  color: #039777;
+}
+
+.cc-modal-dark:hover {
+  color: #25d366;
+}
+
+.cc-modal-green {
+  background-color: #039777;
+  color: #212529;
+}
+
+.cc-modal-green:hover {
+  background-color: #25d366;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.modal-body {
+  margin: 0 1em;
+}
+
+.cc-check:checked {
+  border: none;
+  background-color: #039777;
+}
 /*# sourceMappingURL=styles.css.map */
