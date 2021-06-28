@@ -800,4 +800,63 @@ form {
   border: none;
   background-color: #039777;
 }
+
+.cc-logout-body {
+  position: relative;
+  background: url("../img/logoutbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cc-qr-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 4em;
+  background-color: white;
+  position: absolute;
+  width: 60%;
+  height: 55%;
+  top: 10%;
+  left: 20%;
+  border-radius: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 2px 2px 5px #212529;
+          box-shadow: 2px 2px 5px #212529;
+}
+
+.cc-qrtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cc-qrtext p {
+  font-size: 1.3em;
+}
+
+.cc-qrtext small {
+  color: teal;
+}
+
+.cc-qrtext i {
+  background-color: #c5c5c5;
+  padding: 4px 6px;
+  margin: 0 4px;
+  font-size: 0.9em;
+  border-radius: 0.3em;
+}
+
+.cc-qrcode {
+  max-height: 300px;
+}
 /*# sourceMappingURL=styles.css.map */

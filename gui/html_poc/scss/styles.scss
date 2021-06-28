@@ -660,3 +660,47 @@ form {
   border: none;
   background-color: rgb(3, 151, 119);
 }
+
+.cc-logout-body {
+  position: relative;
+  background: url('../img/logoutbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cc-qr-panel {
+  display: flex;
+  width: 100%;
+  padding: 4em;
+  background-color: white;
+  position: absolute;
+  width: 60%;
+  height: 55%;
+  top: 10%;
+  left: 20%;
+  border-radius: 5px;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px $color-highlight-dark;
+}
+.cc-qrtext {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  p {
+    font-size: 1.3em;
+  }
+  small {
+    color: teal;
+  }
+  i {
+    background-color: $color-highlight-light;
+    padding: 4px 6px;
+    margin: 0 4px;
+    font-size: 0.9em;
+    border-radius: 0.3em;
+  }
+}
+
+.cc-qrcode {
+  max-height: 300px;
+}
