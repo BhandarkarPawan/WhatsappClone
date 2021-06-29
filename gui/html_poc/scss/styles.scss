@@ -479,6 +479,12 @@ form {
   align-items: center;
 }
 
+.cc-dropdown-regular {
+  .cc-a {
+    font-size: 1.1em;
+  }
+}
+
 .cc-bordered {
   border: 1px $color-unread solid;
   border-radius: 1px;
