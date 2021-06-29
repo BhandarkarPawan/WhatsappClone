@@ -482,7 +482,14 @@ form {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   height: 0px;
+  max-height: 40%;
+  display: none;
   background-color: #212529;
+}
+
+#emojiSection {
+  overflow-y: scroll;
+  max-height: 75%;
 }
 
 #emojiTabs {
@@ -511,6 +518,18 @@ form {
           flex: 1 0 auto;
   text-decoration: none;
   color: #a8a8a8;
+}
+
+.cc-emoji {
+  font-size: 2.8em;
+}
+
+.cc-emoji-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .cc-emoji-search,

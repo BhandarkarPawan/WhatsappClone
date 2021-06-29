@@ -951,7 +951,7 @@
                   ><img src="img/Fall bois.jpeg" class="cc-profile-pic"
                 /></a>
                 <div class="px-3 d-flex flex-column">
-                  <h6 class="text-white mt-1 mb-0">Fall Bois</h6>
+                  <h6 class="text-white mt-1 mb-0">&#127914;</h6>
                   <small class="text-muted">
                     Hemanth, Kshitij, Neil, Pratham, You
                   </small>
@@ -1137,6 +1137,7 @@
                 placeholder="Search Emoji"
               />
             </div>
+            <div id="emojiSection"></div>
           </div>
 
           <div class="cc-message-input bg-dark p-3">
@@ -1368,9 +1369,12 @@
           toggleAttachButtons();
           document.getElementById('emojiSearch').style.display = 'flex';
           document.getElementById('sidebarBottom').style.height = '800px';
+          document.getElementById('sidebarBottom').style.display = 'block';
         } else {
           emojisActive = false;
           document.getElementById('emojiSearch').style.display = 'none';
+          document.getElementById('sidebarBottom').style.display = 'none';
+
           document.getElementById('sidebarBottom').style.height = '0px';
         }
       }
@@ -1486,6 +1490,49 @@
 
         console.log('Done:');
       }
+
+      function get_hex(yourNumber) {
+        return yourNumber.toString();
+      }
+
+      function get_num(hexString) {
+        return parseInt(hexString);
+      }
+
+      function increment_hex(hexString) {
+        return get_hex(get_num(hexString) + 1);
+      }
+
+      function add_emoji_row(html, content) {
+        return `${html}<div class="cc-emoji-row">
+          ${content}
+        </div>`;
+      }
+
+      function add_emoji_to_row(row, emoji) {
+        return `${row}<p class="cc-emoji">${emoji}</p>`;
+      }
+
+      var emoji_list = [];
+      var prev_emoji = '128512';
+      for (var i = 0; i < 80; i++) {
+        emoji_list.push(`&#${prev_emoji};`);
+        prev_emoji = increment_hex(prev_emoji);
+      }
+
+      console.log(emoji_list);
+      var emoji_html = '';
+      var current_emoji_row = '';
+      limit = 15;
+      for (var i = 1; i < emoji_list.length; i++) {
+        current_emoji_row = add_emoji_to_row(current_emoji_row, emoji_list[i]);
+        if (i % limit == 0) {
+          emoji_html = add_emoji_row(emoji_html, current_emoji_row);
+          current_emoji_row = '';
+        }
+      }
+
+      document.getElementById('emojiSection').innerHTML = emoji_html;
     </script>
   </body>
 </html>

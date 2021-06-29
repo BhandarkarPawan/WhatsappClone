@@ -399,7 +399,14 @@ form {
   text-align: center;
   transition: 0.2s ease-in-out;
   height: 0px;
+  max-height: 40%;
+  display: none;
   background-color: $color-highlight-dark;
+}
+
+#emojiSection {
+  overflow-y: scroll;
+  max-height: 75%;
 }
 
 #emojiTabs {
@@ -418,6 +425,14 @@ form {
     text-decoration: none;
     color: $color-highlight;
   }
+}
+.cc-emoji {
+  font-size: 2.8em;
+}
+
+.cc-emoji-row {
+  display: flex;
+  justify-content: space-around;
 }
 
 .cc-emoji-search,
