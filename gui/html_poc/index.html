@@ -1513,10 +1513,34 @@
         return `${row}<p class="cc-emoji">${emoji}</p>`;
       }
 
+      var ignoredEmojis = [];
+      for (var i = 128591; i <= 128639; i++) {
+        ignoredEmojis.push(i.toString());
+      }
+
+      for (var i = 128709; i <= 128715; i++) {
+        ignoredEmojis.push(i.toString());
+      }
+
+      for (var i = 128722; i <= 129292; i++) {
+        ignoredEmojis.push(i.toString());
+      }
+
+      for (var i = 129536; i <= 129680; i++) {
+        ignoredEmojis.push(i.toString());
+      }
+
+      const emojiElement = document.getElementById('emojiSection');
+      emojiElement.scroll(function () {
+        console.log('BRuh');
+      });
+
       var emoji_list = [];
       var prev_emoji = '128512';
-      for (var i = 0; i < 80; i++) {
-        emoji_list.push(`&#${prev_emoji};`);
+      for (var i = 0; i < 1200; i++) {
+        if (!ignoredEmojis.includes(prev_emoji)) {
+          emoji_list.push(`&#${prev_emoji};`);
+        }
         prev_emoji = increment_hex(prev_emoji);
       }
 
